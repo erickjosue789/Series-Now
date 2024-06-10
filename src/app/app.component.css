@@ -1,0 +1,27 @@
+main {
+    margin-top: 60px;
+}
+
+.active .nav-link {
+    color: white;
+}
+
+.nav-link {
+    color: rgb(167, 167, 167);
+}
+
+/* Footer Styles */
+footer a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.footer-links{
+    text-decoration: none;
+    color: rgb(167, 167, 167);
+}
