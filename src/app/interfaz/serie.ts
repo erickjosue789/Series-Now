@@ -1,4 +1,5 @@
 export interface Serie {
+    getTopTenShows(): unknown;
     id: number;
     name: string;
     image: {
