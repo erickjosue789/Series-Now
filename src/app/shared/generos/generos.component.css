@@ -1,0 +1,142 @@
+body {
+  background-color: #000;
+  color: #fff; /* Color de texto blanco opcional para mejorar la legibilidad */
+}
+/* Contenedor principal */
+.container {
+  margin-top: 4rem;
+}
+
+/* Estilo para la sección de géneros */
+.bg-dark {
+  background-color: #222 !important; /* Fondo negro más claro */
+  padding: 15px;
+}
+
+.bg-dark h4 {
+  color: white; /* Color de texto para el título */
+}
+
+.list-group-item {
+  cursor: pointer;
+  background-color: #333; /* Fondo negro más oscuro */
+  color: white; /* Texto blanco por defecto */
+  border: none; /* Sin borde */
+}
+
+.list-group-item.active {
+  background-color: #dc3545; /* Color rojo para el género seleccionado */
+  color: white; /* Texto blanco */
+}
+
+/* Estilos para las tarjetas de series */
+.card {
+  background-color: #151515; /* Color de fondo para las tarjetas */
+  border: none;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Oculta el contenido que sobresale */
+}
+
+.card img {
+  width: 100%;
+  height: 80%; /* Altura del 80% para la imagen */
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+.card-body {
+  padding: 10px; /* Ajuste del padding */
+  text-align: center; /* Centrado del contenido */
+}
+
+.card-title {
+  color: white; /* Color del título */
+  font-size: 16px; /* Tamaño de fuente del título */
+}
+
+.stars {
+  color: rgb(167, 167, 167); /* Color de las estrellas */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.stars i {
+  color: #f39c12; /* Color de las estrellas */
+}
+
+/* Estilos para el botón "Ver Ahora" */
+.btn-ver {
+  background-color: #444; /* Fondo negro más claro */
+  border-color: #444; /* Color del borde */
+  color: white; /* Color del texto */
+}
+
+.btn-ver:hover {
+  background-color: #dc3545; /* Fondo rojo al pasar el mouse */
+  border-color: #dc3545; /* Borde rojo al pasar el mouse */
+  color: white; /* Color del texto */
+}
+
+/* Estilos para la paginación */
+.pagination {
+  justify-content: center; /* Centrado de la paginación */
+  margin-top: 1rem; /* Margen superior */
+}
+
+.page-link {
+  border: none;
+  color: rgb(167, 167, 167);
+  background-color: rgb(34, 34, 34);
+}
+
+.page-link:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(86, 86, 86);
+}
+
+.page-item.disabled .page-link {
+  pointer-events: none;
+}
+
+.page-item.red .page-link {
+  color: red;
+  background-color: transparent;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .bg-dark {
+    padding: 10px; /* Ajuste del padding para dispositivos móviles */
+  }
+
+  .list-group-item {
+    font-size: 14px;
+  }
+
+  .card {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .card img {
+    height: 50%;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 12px;
+  }
+
+  .btn-ver {
+    font-size: 12px;
+  }
+
+  .pagination {
+    margin-top: 0.5rem; 
+  }
+}

@@ -8,5 +8,15 @@ export interface Serie {
     rating:{
         average: number;
     };
-    genres: [];
+    genres: string[];
+}
+
+export interface Show {
+    id: number;
+    name: string;
+    image: {
+        original: string;
+        medium: string;
+    };
+    genres: []
 }
