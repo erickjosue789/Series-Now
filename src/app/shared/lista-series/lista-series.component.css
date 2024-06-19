@@ -1,0 +1,134 @@
+.carousel-item img {
+    height: 720px;
+    object-fit: cover;
+}
+
+.stars i {
+    color: #f39c12;
+    /* Color de las estrellas */
+}
+
+.card img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #151515;
+    border: none;
+}
+
+.card-title {
+    color: white;
+}
+
+.stars {
+    color: rgb(167, 167, 167);
+    margin-bottom: 10px;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515);
+    z-index: 1;
+}
+
+.carousel-caption {
+    z-index: 2;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 3;
+}
+
+section {
+    background-color: #151515;
+}
+
+section h1 {
+    color: white;
+}
+
+section p {
+    color: rgb(167, 167, 167);
+}
+
+.page-link {
+    border: none;
+    color: rgb(167, 167, 167);
+    background-color: rgb(34, 34, 34);
+}
+
+.active .page-link {
+    color: rgb(255, 255, 255);
+    background-color: rgb(86, 86, 86);
+
+}
+
+.btn-gray {
+    background-color: rgba(86, 86, 86, 0.463);
+    color: rgb(131, 131, 131);
+}
+
+.btn-gray:hover {
+    background-color: rgba(129, 128, 128, 0.463);
+    color: rgb(219, 219, 219);
+}
+
+.card-body {
+    padding: 20px 0px;
+}
+
+/* lista-series.component.css */
+.page-item.red .page-link {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.page-item.red .page-link:hover {
+    background-color: darkred;
+    border-color: darkred;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .card img {
+        height: 240px;
+    }
+
+    .gradient-overlay {
+        height: 305px;
+    }
+
+    .card-body {
+        padding: 20px 5px;
+    }
+
+    .badge {
+        font-size: 7px;
+        border-radius: 2px;
+    }
+
+    .stars {
+        font-size: 8px;
+        margin-bottom: 0px;
+    }
+
+    .card-title {
+        margin-bottom: 3px;
+    }
+
+    .btn {
+        font-size: 10px;
+    }
+}

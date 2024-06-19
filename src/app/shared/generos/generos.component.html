@@ -1,0 +1,44 @@
+<section id="Generos" class="py-5">
+    <div class="container mt-4">
+        <h2>Géneros de Series</h2>
+        <div class="row">
+            <div class="col-md-4 bg-dark">
+                <h4 class="text-light">Selecciona un género:</h4>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let genero of generos" [class.active]="genero === selectedGenre"
+                        (click)="seleccionarGenero(genero)">
+                        {{ genero }}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h4>Series por género:</h4>
+                <div *ngIf="seriesPorGenero.length > 0">
+                    <div class="row">
+                        <div *ngFor="let serie of seriesPorGenero; let i = index;" class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <img [src]="getImageUrl(serie)" class="card-img-top" alt="{{ serie.name }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ serie.name }}</h5>
+                                    <div class="stars">
+                                        <ng-container *ngFor="let star of getStars(serie.rating.average)">
+                                            <i [class]="star"></i>
+                                        </ng-container>
+                                        ({{ getAverage(serie) }} Ranking)
+                                    </div>
+                                    <p class="card-text">
+                                        <span *ngFor="let category of serie.genres" class="badge">{{ category }}</span>
+                                    </p>
+                                    <a href="#" class="btn btn-ver w-100 mt-2">Ver Ahora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="seriesPorGenero.length === 0">
+                    <p>Selecciona un género para ver las series correspondientes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

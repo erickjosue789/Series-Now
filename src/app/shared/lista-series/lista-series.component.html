@@ -1,0 +1,57 @@
+<!-- Series Section -->
+<section id="Series" class="py-5">
+    <div class="container">
+        <h1>Series</h1>
+        <p>Explora tus series favoritas y descubre nuevas.</p>
+
+        <div class="row">
+            <div *ngFor="let serie of getPaginatedSeries(); trackBy: trackBySerieId" class="col-3 mb-5">
+                <div class="card">
+                    <img [src]="getImageUrl(serie)" class="card-img-top" alt="{{serie.id}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ getName(serie) }}</h5>
+                        <div class="stars mb-2">
+                            <ng-container *ngFor="let star of getStars(serie.rating.average)">
+                                <i [class]="star"></i>
+                            </ng-container>
+                            ({{ getAverage(serie) }} Ranking)
+                        </div>
+                        <p class="card-text">
+                            <span *ngFor="let category of serie.genres" class="badge bg-secondary mx-1">{{ category }}</span>
+                        </p>
+                        <a href="#" class="btn btn-danger w-100 mt-2">Ver Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item" [class.disabled]="currentPage === 1">
+                    <a class="page-link" (click)="goToFirstPage()" aria-label="First">
+                        <span aria-hidden="true">&laquo;&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item" [class.disabled]="currentPage === 1">
+                    <a class="page-link" (click)="goToPage(currentPage - 1)" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li *ngFor="let page of pages" class="page-item" [class.active]="page === currentPage" [class.red]="page === currentPage">
+                    <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+                </li>
+                <li class="page-item" [class.disabled]="currentPage === totalPages">
+                    <a class="page-link" (click)="goToPage(currentPage + 1)" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                <li class="page-item" [class.disabled]="currentPage === totalPages">
+                    <a class="page-link" (click)="goToLastPage()" aria-label="Last">
+                        <span aria-hidden="true">&raquo;&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+

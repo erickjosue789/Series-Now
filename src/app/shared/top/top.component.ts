@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { RecursosService } from '../../servicio/recursos.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient  } from '@angular/common/http';
 import { Serie } from '../../interfaz/serie';
 import { CommonModule } from '@angular/common'; // Asegúrate de importar 
 

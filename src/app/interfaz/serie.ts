@@ -9,5 +9,5 @@ export interface Serie {
     rating:{
         average: number;
     };
-    genres: [];
+    genres: string[];
 }

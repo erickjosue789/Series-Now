@@ -1,0 +1,21 @@
+.bg {
+    background-image: url('https://kinsta.com/es/wp-content/uploads/sites/8/2023/01/err-file-not-found.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+.content {
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .bg {
+        height: 400px;
+    }
+}
