@@ -1,0 +1,19 @@
+<div class="container mt-4">
+    <h2 class="header">My Top 10 TV Shows Ever</h2>
+    <ul class="list-group mt-3">
+        <li class="list-group-item" *ngFor="let serie of topSeries; let i = index" [ngClass]="{'top-one': i === 0, 'top-two': i === 1, 'top-three': i === 2}">
+            <div class="row">
+                <div class="col-md-3">
+                    <img [src]="serie.image?.medium || 'https://via.placeholder.com/210x295?text=No+Image'" class="img-fluid" alt="{{ serie.name }}">
+                </div>
+                <div class="col-md-9">
+                    <div class="rank">{{ i + 1 }}</div>
+                    <h4>{{ serie.name }}</h4>
+                    <p>Rating: {{ serie.rating?.average || 'N/A' }}</p>
+                    <p>Seasons: {{ serie.seasons || 'N/A' }}</p>
+                    <p>Genres: {{ serie.genres.join(', ') || 'N/A' }}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
