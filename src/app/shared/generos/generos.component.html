@@ -1,6 +1,6 @@
 <section id="Generos" class="py-5">
     <div class="container mt-4">
-        <h2>Géneros de Series</h2>
+        <h2 class="text-white">Géneros de Series</h2>
         <div class="row">
             <div class="col-md-4 bg-dark">
                 <h4 class="text-light">Selecciona un género:</h4>
@@ -12,7 +12,7 @@
                 </ul>
             </div>
             <div class="col-md-8">
-                <h4>Series por género:</h4>
+                <h4 class="text-white">Series por género:</h4>
                 <div *ngIf="seriesPorGenero.length > 0">
                     <div class="row">
                         <div *ngFor="let serie of seriesPorGenero; let i = index;" class="col-lg-4 col-md-6 mb-4">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div *ngIf="seriesPorGenero.length === 0">
-                    <p>Selecciona un género para ver las series correspondientes.</p>
+                    <p class="text-white">Selecciona un género para ver las series correspondientes.</p>
                 </div>
             </div>
         </div>
